@@ -12,13 +12,13 @@ let userSelect = define_new_user_select_field('perms', 'select', on_user_change 
 $('#sidepanel').append(userSelect);
 
 let dialogBox = define_new_dialog('perms', title='where tf is this title', options = {});
-$('.perm_info').click(function(){
-    $('.perm_info').dialog();
-    let currentFile = $('#perms').attr('filepath');
-    let currentUser = $('perms').attr('username');
-    console.log(currentFile);
-    console.log(currentUser);
-})
+// $('.perm_info').click(function(){
+//     $('.perm_info').dialog();
+//     let currentFile = $('#perms').attr('filepath');
+//     let currentUser = $('perms').attr('username');
+//     console.log(currentFile);
+//     console.log(currentUser);
+// })
 
 // (recursively) makes and returns an html element (wrapped in a jquery object) for a given file object
 function make_file_element(file_obj) {
