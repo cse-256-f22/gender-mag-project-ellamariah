@@ -6,8 +6,8 @@ $('#sidepanel').append(panel);
 // ---- Display file structure ----
 
 let userSelect = define_new_user_select_field('perms', 'select', on_user_change = function(selected_user){
-    $('#perms').attr('filepath', '/C/presentation_documents/important_file.txt');
     $('#perms').attr('username', selected_user);
+    $('#perms').attr('filepath', '/C/presentation_documents/important_file.txt');
 });
 $('#sidepanel').append(userSelect);
 
@@ -29,7 +29,7 @@ function make_file_element(file_obj) {
             <h3 id="${file_hash}_header">
                 <span class="oi oi-folder" id="${file_hash}_icon"/> ${file_obj.filename} 
                 <button class="ui-button ui-widget ui-corner-all permbutton" path="${file_hash}" id="${file_hash}_permbutton"> 
-                    <span class="oi oi-lock-unlocked" id="${file_hash}_permicon"/> 
+                    <span class="oi oi-lock-unlocked" id="${file_hash}_permicon">permissions</span>  
                 </button>
             </h3>
         </div>`)
@@ -49,7 +49,7 @@ function make_file_element(file_obj) {
         return $(`<div class='file'  id="${file_hash}_div">
             <span class="oi oi-file" id="${file_hash}_icon"/> ${file_obj.filename}
             <button class="ui-button ui-widget ui-corner-all permbutton" path="${file_hash}" id="${file_hash}_permbutton"> 
-                <span class="oi oi-lock-unlocked" id="${file_hash}_permicon"/> 
+                <span class="oi oi-lock-unlocked" id="${file_hash}_permicon">permissions</span> 
             </button>
         </div>`)
     }
