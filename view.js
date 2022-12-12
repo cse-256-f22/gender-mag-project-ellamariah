@@ -5,20 +5,14 @@ $('#sidepanel').append(panel);
 
 // ---- Display file structure ----
 
-let userSelect = define_new_user_select_field('perms', 'select', on_user_change = function(selected_user){
+let userSelect = define_new_user_select_field('perms', 'click here to check permissions', on_user_change = function(selected_user){
     $('#perms').attr('username', selected_user);
     $('#perms').attr('filepath', '/C/presentation_documents/important_file.txt');
 });
 $('#sidepanel').append(userSelect);
 
 let dialogBox = define_new_dialog('perms', title='where tf is this title', options = {});
-// $('.perm_info').click(function(){
-//     $('.perm_info').dialog();
-//     let currentFile = $('#perms').attr('filepath');
-//     let currentUser = $('perms').attr('username');
-//     console.log(currentFile);
-//     console.log(currentUser);
-// })
+
 
 // (recursively) makes and returns an html element (wrapped in a jquery object) for a given file object
 function make_file_element(file_obj) {
